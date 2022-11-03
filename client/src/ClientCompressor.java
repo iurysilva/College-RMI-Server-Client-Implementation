@@ -86,14 +86,6 @@ public class ClientCompressor {
                     }catch (IOException error){
                         error.printStackTrace();
                     }
-                    catch ( MalformedURLException murle ) {
-                        System.out.println( );
-                        System.out.println( "MalformedURLException" );
-                    }
-                    catch ( RemoteException re ) {
-                        System.out.println( );
-                        System.out.println( "RemoteException" );
-                    }
                     catch ( NotBoundException nbe ) {
                         System.out.println( );
                         System.out.println( "NotBoundException" );
