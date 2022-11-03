@@ -70,8 +70,7 @@ public class ClientCompressor {
                         fileInputStream.read(fileContentBytes);
 
                         //System.out.println("Image sent to: " + args[0]);
-                        Compressor c = (Compressor)
-                        Naming.lookup("//192.168.100.35/CompressionService");
+                        Compressor c = (Compressor) Naming.lookup("//192.168.100.35/CompressionService");
 
                         byte[] compressedFileContentBytes = c.compress(fileContentBytes);
                         try {
