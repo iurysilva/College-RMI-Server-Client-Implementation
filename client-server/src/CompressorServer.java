@@ -5,7 +5,7 @@ public class CompressorServer {
         try {
             Compressor obj = new CompressorImp() {
             };
-            Naming.rebind("//192.168.100.35/CompressionService", obj);
+            Naming.rebind("//68.183.143.117:33419/CompressionService", obj);
         }
         catch( Exception e) {
             System.out.println("Erro: " + e);

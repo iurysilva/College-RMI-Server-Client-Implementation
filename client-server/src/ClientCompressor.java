@@ -14,7 +14,7 @@ import java.io.File;
 public class ClientCompressor {
     public static void main( String[] args ) {
         final File[] fileToSend = new File[1];
-
+        System.setProperty("java.rmi.server.hostname","68.183.143.117");
         JFrame jFrame = new JFrame("Client");
         jFrame.setSize(450, 450);
         jFrame.setLayout(new BoxLayout(jFrame.getContentPane(), BoxLayout.Y_AXIS));
@@ -70,7 +70,7 @@ public class ClientCompressor {
                         fileInputStream.read(fileContentBytes);
 
                         //System.out.println("Image sent to: " + args[0]);
-                        Compressor c = (Compressor) Naming.lookup("//192.168.100.35/CompressionService");
+                        Compressor c = (Compressor) Naming.lookup("//68.183.143.117:33419/CompressionService");
 
                         byte[] compressedFileContentBytes = c.compress(fileContentBytes);
                         try {
